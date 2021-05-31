@@ -211,6 +211,119 @@ def game_play():
 
         clock.tick(60)
 
+# Instructions window
+    if instruction_clicked:
+        instruction_window = pygame.display.set_mode((display_width, display_height))
+
+        pygame.display.set_caption('Instructions')
+
+        instruction_clock = pygame.time.Clock()
+
+        instruction_window.blit(backgroundImage, (0, 0))
+
+        setText("Instructions", 120, (display_width / 2 - 360, 50), (180, 180, 180,), None, "Cooper Black")
+
+        setText("1. Select a game mode- 'Bomb' or 'NO Bomb'", 45, (40, 220), (255, 255, 255))
+
+        setText("2. Use left and right arrow keys to move the Einstein.", 45, (40, 290), (255, 255, 255))
+
+        setText("3. Teach Einstein  as many math symbol as you can.", 45, (40, 360), (255, 255, 255))
+
+        setText("4. Don't let the symbols touch the ground", 45, (40, 430), (255, 255, 255))
+
+        setText("5. Watch out for bombs (division by zero)", 45, (40, 500),
+                (255, 255, 255))
+
+        pygame.draw.rect(instruction_window, (51, 51, 51), (display_width / 2 - 120, 560, 160, 80))
+
+        setText("Back", 50, (display_width / 2 - 100, 570), (255, 255, 255), None, "Cooper Black")
+    while instruction_clicked:
+
+        for event in pygame.event.get():
+
+            mouse = pygame.mouse.get_pos()
+
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+            if display_width / 2 + 45 > mouse[0] > display_width / 2 - 120 and 640 > mouse[1] > 560:
+
+                pygame.draw.rect(instruction_window, (100, 100, 100), (display_width / 2 - 120, 560, 160, 80))
+
+                setText("Back", 50, (display_width / 2 - 100, 570), (255, 255, 255), None, "Cooper Black")
+
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    instruction_clicked = False
+                    game_play()
+
+
+            else:
+
+                pygame.draw.rect(instruction_window, (70, 70, 70), (display_width / 2 - 120, 560, 160, 80))
+
+                setText("Back", 50, (display_width / 2 - 100, 570), (255, 255, 255), None, "Cooper Black")
+
+        pygame.display.update()
+
+        instruction_clock.tick(30)
+
+    # High Score window
+    if best_scores_clicked:
+        score_window = pygame.display.set_mode((display_width, display_height))
+
+        pygame.display.set_caption('High Score')
+
+        score_clock = pygame.time.Clock()
+
+        score_window.blit(backgroundImage, (0, 0))
+
+        setText("High Score", 120, (display_width / 2 - 300, 50), (180, 180, 180), None, "Cooper Black")
+
+        file_object, high_score = file_open_read()
+
+        setText(high_score, 150, (display_width / 2 - 30, display_height / 2 - 70), (255, 255, 255))
+
+        pygame.draw.rect(score_window, (50, 50, 50), (display_width / 2 - 130, display_height / 2 + 160, 300, 130))
+
+        setText("Go Back", 70, (display_width / 2 - 130, display_height / 2 + 180), (255, 255, 255), None,
+                "Cooper Black")
+
+        file_close(file_object)
+    while best_scores_clicked:
+
+        for event in pygame.event.get():
+
+            mouse_position = pygame.mouse.get_pos()
+
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+            if display_width / 2 + 170 > mouse_position[0] > display_width / 2 - 130 and display_height / 2 + 290 > \
+                    mouse_position[1] > display_height / 2 + 160:
+
+                pygame.draw.rect(score_window, (100, 100, 100),
+                                 (display_width / 2 - 130, display_height / 2 + 160, 300, 130))
+
+                setText("Go Back", 70, (display_width / 2 - 130, display_height / 2 + 180), (255, 255, 255), None,
+                        "Cooper Black")
+
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    best_scores_clicked = False
+                    game_play()
+
+            else:
+
+                pygame.draw.rect(score_window, (50, 50, 50),
+                                 (display_width / 2 - 130, display_height / 2 + 160, 300, 130))
+
+                setText("Go Back", 70, (display_width / 2 - 130, display_height / 2 + 180), (255, 255, 255), None,
+                        "Cooper Black")
+
+        pygame.display.update()
+
+        score_clock.tick(30)
 
 
 
