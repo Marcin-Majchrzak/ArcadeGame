@@ -15,8 +15,8 @@ The project was made for the programming course at the Wrocław University of Te
 ### How to run this app?
 Python 3.9.0 is recommended
 1. Clone the template project to your device:  
-`git clone https://github.com/Marcin-Majchrzak/ArcadeGame Teach_Enstein!_game`<br/>
-`cd Teach_Enstein!_game`<br/>
+`git clone https://github.com/Marcin-Majchrzak/ArcadeGame Teach_Enstein`<br/>
+`cd Teach_Enstein`<br/>
 2. Install the project's development and runtime requirements:<br/>
 `pip install -r requirements.txt`
 3. Run the game:<br/>
