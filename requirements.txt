@@ -1,2 +1,2 @@
-python==3.9
+# recommended python==3.9
 pygame==2.0.1
