@@ -2,7 +2,7 @@
 ## Author: Marcin Majchrzak
 
 ### Short description
-The project was made for the programming course at the Wrocław University of Technology. TEACH ENSTEIN! is the egg catching game made in Python packed with mathematical touches . The user can make Enstein move both sides using the arrow keys to collect (teach) as many math symbols as he/she can which is the scoring factor but, he should avoid bombs (division by zero). 
+This project was made for the programming course at the Wrocław University of Technology. TEACH ENSTEIN is the classic egg catching game made in Python packed with mathematical touches. The user can make Enstein move both sides using the arrow keys to collect (teach) as many math symbols as he can, but he should avoid bombs (division by zero). 
 
 ![alt text](https://github.com/Marcin-Majchrzak/ArcadeGame/blob/main/ResourceFiles/Images/s1.png?raw=true)
 ![alt text](https://github.com/Marcin-Majchrzak/ArcadeGame/blob/main/ResourceFiles/Images/s2.png?raw=true)
@@ -13,7 +13,7 @@ The project was made for the programming course at the Wrocław University of Te
 **Pygame** - is a cross-platform set of Python modules designed for writing video games likewise arcade games designed to be used with the Python programming language.
 
 ### How to run this app?
-Python 3.9.0 is recommended
+Python 3.9.0 is recommended. Following the steps below use also eg pip 21.1.2.
 1. Clone the template project to your device:  
 `git clone https://github.com/Marcin-Majchrzak/ArcadeGame Teach_Enstein`<br/>
 `cd Teach_Enstein`<br/>
